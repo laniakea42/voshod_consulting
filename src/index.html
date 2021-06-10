@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" type="image/x-icon" href="https://uchet.kz/bitrix/templates/2016/favicon/r-logo-120.ico">
+	<title>Главная</title>
+	<link rel="stylesheet" href="css/libs.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper index-page">
+
+		<div id="appDiv">
+			<p>some nohtmltext</p>
+			<p>{{htmlcode}}</p>
+			<p v-html="htmlcode"></p>
+		</div>
+
+
+	</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/libs.js"></script>
+<script src="https://unpkg.com/vue@next"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<script>
+	
+	const checkApp = ({
+		data() {
+			return {
+				htmlcode: '<p style="font-size: 55px; color: green">heres v-html text </p>'
+			}
+		}
+	})
+
+	const app = Vue.createApp(checkApp)
+
+	app.mount('#appDiv')
+
+
+
+</script>
+</body>
+</html>
